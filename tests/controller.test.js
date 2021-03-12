@@ -60,7 +60,7 @@ test('PokemonController threw an exception handling a POST request with duplicat
 	});
 });
 
-test('PokemonController threw an exception handling a GET (all) request with no Pokemon in database.', async () => {
+test('PokemonController handled a GET (all) request with no Pokemon in database.', async () => {
 	const request = new Request('GET', '/pokemon');
 	const controller = new PokemonController(request, new Response());
 	const response = await controller.doAction();
